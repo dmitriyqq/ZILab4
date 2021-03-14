@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZILab4", "ZILab4\ZILab4.csproj", "{797132C5-CB92-403A-B301-30701B1BC255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZILab4Lib", "ZILab4Lib\ZILab4Lib.csproj", "{613A5F05-FB8B-4F13-B594-C795D8B14D1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797132C5-CB92-403A-B301-30701B1BC255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797132C5-CB92-403A-B301-30701B1BC255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797132C5-CB92-403A-B301-30701B1BC255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797132C5-CB92-403A-B301-30701B1BC255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{613A5F05-FB8B-4F13-B594-C795D8B14D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613A5F05-FB8B-4F13-B594-C795D8B14D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613A5F05-FB8B-4F13-B594-C795D8B14D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613A5F05-FB8B-4F13-B594-C795D8B14D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36120CC5-AC40-4D4C-AF43-D989822A236B}
+	EndGlobalSection
+EndGlobal
