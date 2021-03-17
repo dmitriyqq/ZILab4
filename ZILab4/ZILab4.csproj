@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZILab4Lib\ZILab4Lib.csproj">
+      <Project>{613a5f05-fb8b-4f13-b594-c795d8b14d1f}</Project>
+      <Name>ZILab4Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -156,19 +156,19 @@ namespace ZILab3Lib
         private void f(uint[] block)
         {
             const uint C = 0x2aaaaaaa;
-            const UInt64 C0 = 0x025f1cdb;
-            const UInt64 C1 = C0 << 1;
-            const UInt64 C2 = C0 << 3;
-            const UInt64 C3 = (C0 << 7) % uint.MaxValue;
+            const ulong C0 = 0x025f1cdb;
+            const ulong C1 = C0 << 1;
+            const ulong C2 = C0 << 3;
+            const ulong C3 = (C0 << 7) % uint.MaxValue;
 
 
-            UInt64[] c = new UInt64[4] { C0, C1, C2, C3 };
+            ulong[] c = new ulong[4] { C0, C1, C2, C3 };
             
             //printBlock("fstart", 0, block);
 
             for (int i = 0; i < 4; i++)
             {
-                UInt64 num = (UInt64)(c[i]) * (UInt64)block[i];
+                ulong num = (ulong)(c[i]) * (ulong)block[i];
                 block[i] = block[i] == uint.MaxValue ? block[i] : (uint)((num) % uint.MaxValue);
             }
 
@@ -258,12 +258,12 @@ namespace ZILab3Lib
         private void fReverse(uint[] block)
         {
             const uint C = 0x2aaaaaaa;
-            const UInt64 C0 = 0x0dad4694;
-            const UInt64 C1 = 0x06d6a34a;
-            const UInt64 C2 = 0x81b5a8d2;
-            const UInt64 C3 = 0x281b5a8d;
+            const ulong C0 = 0x0dad4694;
+            const ulong C1 = 0x06d6a34a;
+            const ulong C2 = 0x81b5a8d2;
+            const ulong C3 = 0x281b5a8d;
 
-            UInt64[] c = new UInt64[4] { C0, C1, C2, C3 };
+            ulong[] c = new ulong[4] { C0, C1, C2, C3 };
             //printBlock("rstart", 0, block);
             for (int i = 3; i >= 0; i--)
             {
@@ -286,7 +286,7 @@ namespace ZILab3Lib
 
             for (int i = 3; i >= 0; i--)
             {
-                UInt64 num = (UInt64)(c[i]) * (UInt64)block[i];
+                ulong num = (ulong)(c[i]) * (ulong)block[i];
                 block[i] = block[i] == uint.MaxValue ? block[i] : (uint)((num) % uint.MaxValue);
             }
 

@@ -182,6 +182,9 @@ namespace ZILab4
             // 
             // errorList
             // 
+            this.errorList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.errorList.FormattingEnabled = true;
             this.errorList.ItemHeight = 16;
             this.errorList.Location = new System.Drawing.Point(507, 160);
