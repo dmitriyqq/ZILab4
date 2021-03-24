@@ -184,18 +184,19 @@ namespace ZILab4
                 try
                 {
                     var key = GetKey();
-                    //var encodedBytes = encodingService.Encode(bytes, key);
-                    var origFileSize = BitConverter.ToUInt32(bytes, 0);
+                    // First 16 bytes is MAC
+                    var origFileSize = bytes.Length - 16;
 
-                    var encodedSize = origFileSize % 16 == 0 ? origFileSize : origFileSize + (16 - origFileSize % 16);
-                    var encodedPart = new byte[encodedSize + 4];
+                    var encodedSize = 16;
+                    var encodedPart = new byte[16];
                     var origPart = new byte[origFileSize];
+
                     Log($"encodedSize {encodedSize}");
                     Log($"origFileSize {origFileSize}");
                     Log($"totalSize {bytes.Length}");
 
-                    Array.Copy(bytes, 0, encodedPart, 0, encodedSize + 4);
-                    Array.Copy(bytes, 4 + encodedSize, origPart, 0, origFileSize);
+                    Array.Copy(bytes, 0, encodedPart, 0, encodedSize);
+                    Array.Copy(bytes, 16, origPart, 0, origFileSize);
 
                     var jey1 = string.Join(",", key);
                     Log($"Props for calculating mac: {BitConverter.ToString(origPart)} {jey1}");
